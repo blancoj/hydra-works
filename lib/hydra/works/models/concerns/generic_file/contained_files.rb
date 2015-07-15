@@ -2,7 +2,7 @@ module Hydra::Works::GenericFile::ContainedFiles
   extend ActiveSupport::Concern
 
   # HydraWorks supports only one each of original_file, thumbnail, and extracted_text. However
-  # you are free to add an unlimited number of addtition types such as different resolutions
+  # you are free to add an unlimited number of additional types such as different resolutions
   # of images, different derivatives, etc, and use any established vocabulary you choose.
 
   # TODO: se PCDM vocab class when projecthydra-labs/hydra-pcdm#80 is merged
