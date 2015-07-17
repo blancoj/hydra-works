@@ -14,6 +14,7 @@ describe Hydra::Works::GenericFile::Derivatives do
       allow_any_instance_of(Hydra::Works::GenericFile::Base).to receive(:mime_type).and_return(mime_type)
       generic_file.save!
     end
+
     context 'with a video (.avi) file', unless: $in_travis do
       let(:mime_type) { 'video/avi' }
       let(:file_name) { 'countdown.avi' }
@@ -26,6 +27,8 @@ describe Hydra::Works::GenericFile::Derivatives do
       it 'generates a thumbnail derivative' do
         #expect(generic_file).to receive(:create_derivatives)
         generic_file.create_derivatives
+        binding.pry
+        generic_file.build_thumbnail
         expect(generic_file.thumbnail).to have_content
         expect(generic_file.thumbnail.mime_type).to eq('image/jpeg')
       end

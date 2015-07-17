@@ -3,6 +3,8 @@ require 'active_fedora/aggregation'
 require 'hydra/pcdm'
 require 'hydra/derivatives'
 require 'hydra/works/processor'
+require 'hydra/works/importable_file_factory'
+require 'hydra/works/importable_file'
 
 module Hydra
   module Works
