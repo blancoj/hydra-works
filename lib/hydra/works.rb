@@ -32,6 +32,7 @@ module Hydra
       autoload :GenerateThumbnail
       autoload :UploadFileToGenericFile
       autoload :PersistDerivative
+      autoload :FullTextExtractionService
     end
   end
 end
